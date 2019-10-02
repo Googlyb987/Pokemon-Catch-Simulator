@@ -21,7 +21,6 @@ function App() {
         axios
         .get('https://pokeapi.co/api/v2/pokemon/' + pokeId())
         .then(response => {
-            console.log(response.data);
             setWildPokemon(response.data);
         })
     }
@@ -34,7 +33,9 @@ function App() {
             </header>
 
             <section className="wild-pokemon">
-                {wildPokemon.name}
+               <h2>Wild Encounter</h2>
+            <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
+             + wildPokemon.id + ".png"} alt=""/>
             </section>
         </div>
     )
