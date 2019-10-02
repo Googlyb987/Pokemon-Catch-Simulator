@@ -13,7 +13,7 @@ function App() {
 
     const pokeId = () =>  {
         const min = Math.ceil(1)
-        const max = Math.floor(151)
+        const max = Math.floor(807)
         return Math.floor(Math.random() * (max - min + 1)) + min
     }
 
@@ -47,8 +47,7 @@ function App() {
     return (
         <div className="app-wrapper">
             <header>
-                <h1 className="title">React Hooks</h1>
-                <h3 className="subtitle">With Pokemon</h3>
+                <h1 className="title">Pokemon Catch Simulator</h1>
             </header>
 
             <section className="wild-pokemon">
