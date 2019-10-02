@@ -40,6 +40,10 @@ function App() {
         encounterWildPokemon()
     }
 
+    const releasePokemon = id => {
+        setPokedex(state => state.filter(p => p.id != id))
+    }
+
     return (
         <div className="app-wrapper">
             <header>
@@ -63,7 +67,7 @@ function App() {
                         <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
                         + pokemon.id + ".png"} className="sprite" />
                         <h3 className="pokemon-name">{pokemon.name}</h3>
-                        <button className="remove">&times;</button>
+                        <button className="remove" onClick={() => releasePokemon(pokemon.id)}>&times;</button>
                       </div>  
                     ))}
                 </div>
